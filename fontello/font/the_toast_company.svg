@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="the_toast_company" horiz-adv-x="1000" >
+<font-face font-family="the_toast_company" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="fire" unicode="&#xe800;" d="M7 238q10 41 50 131t44 146q39-72 45-145 148 184 154 428 10-6 25-17t58-45 74-74 61-96 34-118q15 36 19 79t-9 80q15-12 41-39t56-75 56-99 31-118-9-127-72-127-152-120q64 129 25 278t-154 229q10-43-11-141t-65-150q7 63 4 102t-12 59l-10 17q-12-70-60-140-26-38-39-69t-9-80 30-105q-135 76-181 154t-24 182z" horiz-adv-x="748" />
+
+<glyph glyph-name="ok" unicode="&#xe801;" d="M875 588l-535-600-340 338 123 124 196-195 420 457z" horiz-adv-x="875" />
+
+<glyph glyph-name="cancel" unicode="&#xe802;" d="M123 654l181-181 181 181 123-124-182-178 183-184-124-121-181 182-181-182-123 122 183 183-182 178z" horiz-adv-x="609" />
+
+<glyph glyph-name="attention" unicode="&#xe803;" d="M905 77c8-14 11-30 11-45 0-53-41-91-90-91l-735 0c-48 0-91 40-91 91 0 15 4 31 13 45l368 637c15 28 44 45 78 45 32 0 61-17 77-45z m-512 472l0-299 133 0 0 299-133 0z m67-369c-42 0-75-32-75-76 0-41 33-74 75-74s75 33 75 74c0 43-32 76-75 76z" horiz-adv-x="916" />
+
+<glyph glyph-name="info" unicode="&#xe804;" d="M469 78l0 349-121 0 0-349 121 0z m-61 410c40 0 71 31 71 72 0 39-31 70-71 70s-72-31-72-70c0-40 32-72 72-72z m-2 269c224 0 407-182 407-407 0-223-183-406-407-406-225 0-406 183-406 406 0 225 181 407 406 407z" horiz-adv-x="813" />
+
+<glyph glyph-name="question" unicode="&#xe805;" d="M405 618c-105 0-160-58-160-163l130 0c0 39 9 58 29 58 19 0 27-19 27-58 0-48-23-66-70-66-3 0-11 0-20 1l0-122 130 0 0 51c64 16 97 63 97 136 0 97-69 163-163 163z m1-405c-41 0-76-35-76-78 0-41 35-77 76-77s77 36 77 77-35 78-77 78z m0 544c224 0 407-182 407-407 0-223-183-406-407-406-225 0-406 183-406 406 0 225 181 407 406 407z" horiz-adv-x="813" />
+
+<glyph glyph-name="angle-circled-up" unicode="&#xf139;" d="M650 214l57 57q11 11 11 25t-11 26l-253 253q-11 11-25 11t-25-11l-254-253q-10-11-10-26t10-25l57-57q11-10 25-10t25 10l172 172 171-172q11-10 25-10t25 10z m207 136q0-117-57-215t-156-156-215-58-216 58-155 156-58 215 58 215 155 156 216 58 215-58 156-156 57-215z" horiz-adv-x="857.1" />
+</font>
+</defs>
+</svg>

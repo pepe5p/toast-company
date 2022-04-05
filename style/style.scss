@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
+
+$cyan1: #F1FAEE;
+$cyan2: #B1CBD0;
+$cyan3: #9BBBC6;
+$cyan4: #86ABBC;
+$cyan5: #709BB2;
+$cyan6: #457B9D;
+$cyan7: #0A2342;
+$blush: #E34F7E;
+$emerald: #2BCA75;
+$honey_yellow: #F3B116;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    color: $cyan7;
+    background-color: $cyan3;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 16px;
+}
+input, button{
+    color: $cyan7;
+    font-family : inherit;
+    font-size: 1em;
+}
+
+.loading_screen{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $cyan2;
+    box-shadow: -10px 0 0 $honey_yellow;
+    transition: right 0.75s ease-in;
+    .loading_box{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        header{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-size: 50px;
+            line-height: 40px;
+            padding: 20px;
+        }
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 120px;
+            transform: translate(-50%,-50%);
+        }
+    }
+    &:before{
+        content: '';
+        top: 0;
+        bottom: 0;
+        right: -10px;
+        left: -10px;
+        background-color: $honey_yellow;
+    }
+    &.loaded{right: -105%;}
+}
+
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    margin: 5px 10px;
+    z-index: 96;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 95;
+    background-color: $cyan2;
+    div{
+        position: relative;
+        width: 50%;
+        line-height: 30px;
+        height: 30px;
+        padding: 0 10px;
+        overflow-x: auto;
+        text-align: center;
+    }
+}
+
+main{
+    border-top: 30px solid $cyan2;
+    border-bottom: 30px solid $cyan2;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.center_box{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.header{
+    min-width: 100%;
+    background-color: $cyan5;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.error{
+    background-color: transparent;
+    font-size: 12px;
+}
+
+.blush, .honey_yellow, .emerald{
+    text-shadow: 1px 1px 0 $cyan7;
+    transition: color 0.3s ease;
+}
+.blush{color: $blush;}
+.emerald{color: $emerald;}
+.honey_yellow{color: $honey_yellow;}
+
+.ham, .cheese, .dbham, .undefined{transition: background-color 0.3s ease;}
+.ham, .dbham{
+    background-color: $blush;
+    border-radius: 100%;
+    z-index: 2;
+}
+.cheese{
+    background-color: $honey_yellow;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+.undefined{
+    background-color: $emerald;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.order_tile{
+    position: relative;
+    min-width: 50%;
+    height: 60px;
+    transition: background-color 0.1s ease-in-out;
+    &:nth-of-type(4n+1){background-color: $cyan4;}
+    &:nth-of-type(4n+2){background-color: $cyan3;}
+    &:nth-of-type(4n+3){background-color: $cyan3;}
+    &:nth-of-type(4n+4){background-color: $cyan4;}
+    &.clicked{background-color: $cyan6;}
+    .toast_box{
+        img, .ham, .cheese{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 10px;
+            left: 10px;
+        }
+        .dbham, .undefined{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 5px;
+            left: 5px;
+        }
+        img{
+            z-index: 3;
+        }
+        .icon-i{
+            color: $cyan1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            line-height: 65px;
+            text-align: center;
+            font-size: 36px;
+            z-index: 4;
+        }
+    }
+    .type, .person{
+        position: absolute;
+        right: 10px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .type{top: 5px;}
+    .person{
+        font-size: 12px;
+        top: 30px;
+    }
+    &.s1{.toast_box{.icon-i:before{content: '\e800';}}}
+    &.s2{.toast_box{.icon-i:before{content: '\e801';}}}
+    &.s4{.toast_box{.icon-i:before{content: '\e802';}}}
+}
+.s3, .s4, .inactive{
+    .toast_box{
+        .ham, .cheese, .dbham, .undefined{background-color: $cyan5;}
+    }
+    .blush, .emerald, .honey_yellow{color: $cyan5;}
+}
+
+.order_panel{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    border-top: 30px solid $cyan2;
+    background-color: $cyan2;
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(100%);
+    &.active{transform: translateY(0);}
+    .order_panel_button{
+        position: absolute;
+        width: 50%;
+        top: -59.5px;
+        right: 0;
+        z-index: 99;
+        background-color: $cyan2;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+    }
+    .accepted_box{
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        background-color: $emerald;
+        color: $cyan1;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 10px 0 0 $cyan1;
+        &.inactive{
+            transform: translateX(-105%);
+        }
+    }
+    .order_box{
+        position: relative;
+        .icon-angle-circled-up{
+            font-size: 25px;
+            z-index: 100;
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: top 0.2s ease, transform 0.2s ease;
+            &.active{
+                top: -62.5px;
+                transform: translateX(-50%) rotate(-180deg);
+            }
+        }
+        .type_tile{
+            position: relative;
+            min-width: 50%;
+            height: 120px;
+            &:nth-of-type(4n+1){background-color: $cyan4;}
+            &:nth-of-type(4n+2){background-color: $cyan3;}
+            &:nth-of-type(4n+3){background-color: $cyan3;}
+            &:nth-of-type(4n+4){background-color: $cyan4;}
+            input[type=radio]{
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            .toast_box{
+                img, .ham, .cheese{
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    top: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .cheese{transform: translateX(-50%) rotate(45deg);}
+                .dbham, .undefined{
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    top: 15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                img{z-index: 3;}
+            }
+            .price{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                transform: rotate(10deg);
+            }
+            .type{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+button{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    color: $cyan1;
+    background-color: $honey_yellow;
+    border: none;
+    transition: color 0.4s ease, background-color 0.4s ease;
+    &:disabled{
+        color: $cyan6;
+        background-color: $cyan2;
+    }
+    &:focus{outline: none;}
+    .icon-ok{
+        color: inherit;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        font-size: 50px;
+        transform: translateY(-45%);
+    }
+}
+input{
+    width: 100%;
+    height: 60px;
+    color: inherit;
+    background-color: $cyan5;
+    border: none;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    &:focus{
+        background-color: $cyan4;
+        outline: none;
+    }
+    &::placeholder{color: $cyan6;}
+}
