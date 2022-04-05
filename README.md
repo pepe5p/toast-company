@@ -1,6 +1,4 @@
 # toast_company
-best toasts in High School
-
 created in order to make toasts faster on breaks in school
 
 <p align="left">
